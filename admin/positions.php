@@ -6,7 +6,7 @@ if(empty($_SESSION['admin_id'])){
  header("location:access-denied.php");
 }
 //retrive positions from the tbpositions table
-$result=mysqli_query($con, "SELECT * FROM tbPositions");
+$result=mysqli_query($con, "SELECT * FROM tbpositions");
 if (mysqli_num_rows($result)<1){
     $result = null;
 }
@@ -46,7 +46,7 @@ $sql = mysqli_query($con, "INSERT INTO tbpositions (position_name) VALUES ('$new
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>Administration Control Panel:Positions</title>
+<title>Sistema de Votación Electrónica</title>
 <link href="css/admin_styles.css" rel="stylesheet" type="text/css" />
 <script language="JavaScript" src="js/admin.js">
 </script>

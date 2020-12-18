@@ -10,7 +10,7 @@ if(empty($_SESSION['member_id'])){
 ?>
 <?php
 // retrieving positions sql query
-$positions=mysqli_query($con, "SELECT * FROM tbPositions");
+$positions=mysqli_query($con, "SELECT * FROM tbpositions");
 ?> 
 <?php
     // retrieval sql query
@@ -21,7 +21,7 @@ $positions=mysqli_query($con, "SELECT * FROM tbPositions");
  $position = addslashes( $_POST['position'] ); //prevents types of SQL injection
  
  // retrieve based on position
- $result = mysqli_query($con,"SELECT * FROM tbCandidates WHERE candidate_position='$position'");
+ $result = mysqli_query($con,"SELECT * FROM tbcandidates WHERE candidate_position='$position'");
  // redirect back to vote
  //header("Location: vote.php");
  }

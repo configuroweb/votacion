@@ -25,7 +25,7 @@ $myPassword = $_POST['password'];
 
 $newpass = md5($myPassword); //This will make your password encrypted into md5, a high security hash
 
-$sql = mysqli_query($con, "INSERT INTO tbMembers(first_name, last_name, email,password) 
+$sql = mysqli_query($con, "INSERT INTO tbmembers(first_name, last_name, email,password) 
 VALUES ('$myFirstName','$myLastName', '$myEmail', '$newpass') ");
 
 die( "You have registered for an account.<br><br>Go to <a href=\"index.php\">Login</a>" );

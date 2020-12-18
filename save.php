@@ -18,7 +18,7 @@ else
 {
     //insert data and check position
     $ins=mysqli_query($con,"INSERT INTO tblvotes (voter_id, position, candidateName) VALUES ('$user_id', '$position', '$vote')");
-    mysqli_query($con, "UPDATE tbCandidates SET candidate_cvotes=candidate_cvotes+1 WHERE candidate_name='$vote'");
+    mysqli_query($con, "UPDATE tbcandidates SET candidate_cvotes=candidate_cvotes+1 WHERE candidate_name='$vote'");
     mysqli_close($con);
  
 echo "<h3 style='color:blue'>Felicidades!! Has enviado tu voto para el candidato ".$vote."</h3>";

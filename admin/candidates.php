@@ -6,14 +6,14 @@ if(empty($_SESSION['admin_id'])){
  header("location:access-denied.php");
 } 
 //retrive candidates from the tbcandidates table
-$result=mysqli_query($con,"SELECT * FROM tbCandidates");
+$result=mysqli_query($con,"SELECT * FROM tbcandidates");
 if (mysqli_num_rows($result)<1){
     $result = null;
 }
 ?>
 <?php
 // retrieving positions sql query
-$positions_retrieved=mysqli_query($con, "SELECT * FROM tbPositions");
+$positions_retrieved=mysqli_query($con, "SELECT * FROM tbpositions");
 /*
 $row = mysqli_fetch_array($positions_retrieved);
  if($row)
@@ -31,7 +31,7 @@ if (isset($_POST['Submit']))
 $newCandidateName = addslashes( $_POST['name'] ); //prevents types of SQL injection
 $newCandidatePosition = addslashes( $_POST['position'] ); //prevents types of SQL injection
 
-$sql = mysqli_query($con, "INSERT INTO tbCandidates(candidate_name,candidate_position) VALUES ('$newCandidateName','$newCandidatePosition')" );
+$sql = mysqli_query($con, "INSERT INTO tbcandidates(candidate_name,candidate_position) VALUES ('$newCandidateName','$newCandidatePosition')" );
 
 // redirect back to candidates
  header("Location: candidates.php");

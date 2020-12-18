@@ -44,7 +44,7 @@ $myFirstName = addslashes( $_POST['firstname'] ); //prevents types of SQL inject
 $myLastName = addslashes( $_POST['lastname'] ); //prevents types of SQL injection
 $myEmail = $_POST['email'];
 
-$sql = mysqli_query($con, "UPDATE tbAdministrators SET first_name='$myFirstName', last_name='$myLastName', email='$myEmail' WHERE admin_id = '$myId'" );
+$sql = mysqli_query($con, "UPDATE tbadministrators SET first_name='$myFirstName', last_name='$myLastName', email='$myEmail' WHERE admin_id = '$myId'" );
 }
 ?>
 <table align="center">

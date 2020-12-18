@@ -3,7 +3,7 @@ require('../connection.php');
 // retrieving candidate(s) results based on position
 if (isset($_POST['Submit'])){   
 /*
-$resulta = mysqli_query($con, "SELECT * FROM tbCandidates where candidate_name='Luis Nani'");
+$resulta = mysqli_query($con, "SELECT * FROM tbcandidates where candidate_name='Luis Nani'");
 
 while($row1 = mysqli_fetch_array($resulta))
   {
@@ -12,7 +12,7 @@ while($row1 = mysqli_fetch_array($resulta))
   */
   $position = addslashes( $_POST['position'] );
   
-    $results = mysqli_query($con, "SELECT * FROM tbCandidates where candidate_position='$position'");
+    $results = mysqli_query($con, "select * from tbcandidates where candidate_position='$position'");
 
     $row1 = mysqli_fetch_array($results); // for the first candidate
     $row2 = mysqli_fetch_array($results); // for the second candidate
@@ -31,7 +31,7 @@ while($row1 = mysqli_fetch_array($resulta))
 ?> 
 <?php
 // retrieving positions sql query
-$positions=mysqli_query($con, "SELECT * FROM tbPositions");
+$positions=mysqli_query($con, "select * from tbpositions");
 ?>
 <?php
 session_start();
